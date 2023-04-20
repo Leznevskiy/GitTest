@@ -10,9 +10,5 @@ namespace GitTest.Models
         [Column(TypeName = "nvarchar(max)")]
         [Required]
         public string? Name { get; set; }
-        public Provider(int id, string name)
-        {
-            Id = id; Name = name;
-        }
     }
 }

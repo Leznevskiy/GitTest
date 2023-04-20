@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
+using static Azure.Core.HttpHeader;
 
 namespace GitTest.Models
 {
@@ -11,7 +12,6 @@ namespace GitTest.Models
         public string? Number { get; set; }
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime Date { get; set; }
-
-        public List<Provider> Orders1 { get; set; } = new List<Provider>();
+        
     }
 }
