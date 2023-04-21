@@ -16,7 +16,7 @@ namespace GitTest.Controllers
         {
             db = context;
         }
-        public ActionResult index()
+        public ActionResult Index()
         {
             return View();
         }

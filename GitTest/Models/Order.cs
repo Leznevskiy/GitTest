@@ -12,6 +12,8 @@ namespace GitTest.Models
         public string? Number { get; set; }
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime Date { get; set; }
-        
+
+        public int ProviderId { get; set; }
+        public Provider? Provider { get; set; }
     }
 }

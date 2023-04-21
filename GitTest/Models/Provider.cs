@@ -10,5 +10,6 @@ namespace GitTest.Models
         [Column(TypeName = "nvarchar(max)")]
         [Required]
         public string? Name { get; set; }
+        public List<Order>? Orders { get; set; }
     }
 }
