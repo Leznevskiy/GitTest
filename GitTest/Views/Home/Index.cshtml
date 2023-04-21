@@ -1,35 +1,42 @@
 ﻿@using GitTest.Models
-@model IEnumerable<Order>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>METANIT.COM</title>
+    <style>
+        #navbar {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 20%;
+        }
+
+            #navbar li {
+                border-left: 10px solid #666;
+                border-bottom: 1px solid #666;
+            }
+
+            #navbar a {
+                background-color: #949494;
+                color: #fff;
+                padding: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                border-left: 5px solid #33ADFF;
+                display: block;
+            }
+    </style>
     <meta charset="utf-8" />
 </head>
 <body>
-    <h2>Provider</h2>
-    <p><a asp-action="Create">Добавить Запись</a></p>
-    <table class="table" border="1" cellpadding="5">
-        <tr style ="background-color: silver">
-            <th>Id</th>
-            <th>Number</th>
-            <th>Date</th>
-            <th>name.orders</th>
-        </tr>
-        @foreach (var p in Model)
-        {
-            <tr>
-                <td>@p.Id</td>
-                <td>@p.Number</td>
-                <td>@p.Date</td>
-                @foreach (var q in p.Orders1)
-                {
-                    <td>@q.Name</td>
-                }
-            </tr>
-        }
-        </table>
+    <h2>Menu</h2>
+    <ul id="navbar">
+        <li><a href="#">FullInformation</a></li>
+        <li><a href="@Url.Action("Index","Provider")">Provider</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">OrderItem</a></li>
+    </ul>
 
 </body>
 

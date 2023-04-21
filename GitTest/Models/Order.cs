@@ -14,6 +14,7 @@ namespace GitTest.Models
         public DateTime Date { get; set; }
 
         public int ProviderId { get; set; }
+        [ForeignKey("ProviderId")]
         public Provider? Provider { get; set; }
     }
 }
